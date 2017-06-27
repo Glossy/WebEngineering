@@ -7,7 +7,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
 
 import com.siqin.service.LoginService;
 
@@ -22,26 +21,22 @@ public class LoginServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("account");
-		String psw = req.getParameter("password");
+		String id = req.getParameter("id");
+		String psw = req.getParameter("psw");
 		RequestDispatcher rd = null;
 		String forward = null;
 		
 		boolean bool = loginService.check(id, psw);
 			
 			if (bool) {
-				forward = "/choise.jsp";
-				rd = req.getRequestDispatcher(forward);
-				rd.forward(req, resp);
+				forward = "/success.jsp";
 			} else {
-				/*req.setAttribute("msg", "’À∫≈≤ª¥Ê‘⁄ªÚ√‹¬Î¥ÌŒÛ");
-				forward = "/error.jsp";*/
-				System.out.print("failed");
-				resp.sendRedirect("login.jsp?error=yes");
-				//resp.sendRedirect("./login.jsp");   
-				//resp.sendRedirect("login.jsp");
+				req.setAttribute("msg", "’À∫≈≤ª¥Ê‘⁄ªÚ√‹¬Î¥ÌŒÛ");
+				forward = "/error.jsp";
 			}
 			
+			rd = req.getRequestDispatcher(forward);
+			rd.forward(req, resp);
 		}
 	
 }

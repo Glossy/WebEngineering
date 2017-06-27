@@ -16,14 +16,33 @@
   <servlet-mapping>
     <servlet-name>LoginUpServlet</servlet-name>
     <url-pattern>/loginUpServlet</url-pattern>
-    
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ScenicSearch</display-name>
+    <servlet-name>ScenicSearch</servlet-name>
+    <servlet-class>com.siqin.servlet.ScenicSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScenicSearch</servlet-name>
+    <url-pattern>/ScenicSearch</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FoodSearchServlet</display-name>
+    <servlet-name>FoodSearchServlet</servlet-name>
+    <servlet-class>com.siqin.servlet.FoodSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FoodSearchServlet</servlet-name>
+    <url-pattern>/FoodSearchServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
