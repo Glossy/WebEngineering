@@ -30,6 +30,12 @@ body {
 	}
 </script>
 
+<script type="text/javascript">
+function select(){
+    form.action="";
+    form.submit();  }
+</script>
+
 </head>
 <body>
 
@@ -78,7 +84,7 @@ body {
                     </div>
                     <div class="signin-misc-wrapper clearfix">
 
-                        <button type="button" class="signin-switch-button">注册账号</button>
+                        <button type="button" class="signin-switch-button" onclick = "window.location.href = 'LoginUp.jsp'">注册账号</button>
 
                         <a class="unable-login" href="#">无法登录？</a>
                     </div>
@@ -95,6 +101,9 @@ body {
     </div>
 
 </div>
+
+
+
 <script> 
 //取出传回来的参数error并与yes比较
   var errori ='<%=request.getParameter("error")%>';
