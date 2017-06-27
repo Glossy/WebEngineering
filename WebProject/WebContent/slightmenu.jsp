@@ -36,18 +36,21 @@
     </script>
     <style>
         #choice-title{
-            margin: 0 auto;
+            margin: 0 auto;0
             width: auto;
             color: #0f88eb;
             height: 75px;
             font-size: 50px;
             background-size: contain;
             font-family: "幼圆";
-
-
+        }
+        .search{
+             margin-top: 10px;
+            margin-right: 50px;
         }
     </style>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
 </head>
 <body>
 <div class="banner1 jarallax">
@@ -61,11 +64,19 @@
 
         <nav>
             <ul class="nav navbar-nav">
+              <li><div class="search">
+                    <input required type="text" name="search" aria-label="请输入你想搜索的内容" placeholder="请输入你想搜索的内容" autocomplete="off">
+                    <button onclick = "window.location.href = 'resultsearch.jsp'">搜索</button>
+              </div>
+
+                </li>
+                <li><a href="#" class="scroll">账户(需要添加jsp)</a></li>
                 <li><a href="#" class="scroll">关注</a></li>
                 <li><a href="#" class="scroll">联系我们</a></li>
- 				<li><a href="#" class="scroll">注销</a></li>
+
             </ul>
         </nav>
+
 
         <!-- /.navbar-collapse -->
     </nav>
