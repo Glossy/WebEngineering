@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import com.siqin.dao.FoodSearchDao;
 
@@ -29,9 +30,11 @@ public class FoodSearchDaoImpl implements FoodSearchDao {
 	@Override
 	public ResultSet getResult(Connection conn, String food_keyword) throws SQLException {
 		// TODO Auto-generated method stub
-		PreparedStatement ps = conn.prepareStatement("SELECT 名称,类型,位置 FROM Slight where 名称 like '%?%'");
-		ps.setString(0, food_keyword);
-		return ps.executeQuery();
+		System.out.println(food_keyword);
+		String sql = "SELECT 名称,类型,位置 FROM food where 名称 like '%"+food_keyword+"%'";
+		Statement ps = conn.createStatement();
+		//ps.setString(1, food_keyword);
+		return ps.executeQuery(sql);
 	}
 
 }

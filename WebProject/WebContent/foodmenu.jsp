@@ -52,7 +52,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script type="text/javascript">
 	function jumpToSearchPage() {
-		var var1 = document.getElementsByName("search")[0].value;
+		var var1 = document.getElementsByName("food")[0].value;
 		window.location.href = 'resultsearch.jsp?msg='+var1;
 	}
 	</script>
@@ -69,13 +69,16 @@
 
         <nav>
             <ul class="nav navbar-nav">
-              <li><div class="search">
-                    <input required type="text" name="search" aria-label="请输入你想搜索的内容" placeholder="请输入你想搜索的内容" autocomplete="off">
-                    <button onclick = "jumpToSearchPage()">搜索</button>
+              <li>
+              <div class="search">
+              <form action="<%= request.getContextPath() %>/foodSearchServlet" method="post" name="foodSearchForm">
+                    <input required type="text" name="food" aria-label="请输入你想搜索的内容" placeholder="请输入你想搜索的内容" autocomplete="off">
+                    <button  onclick = "jumpToSearchPage()">搜索</button>
+              </form>
               </div>
 
                 </li>
-                <li><a href="#" class="scroll">账户(需要添加jsp)</a></li>
+                <li><a href="#" class="scroll">账户：123456</a></li>
                 <li><a href="#" class="scroll">关注</a></li>
                 <li><a href="#" class="scroll">联系我们</a></li>
 

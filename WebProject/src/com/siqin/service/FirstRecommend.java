@@ -29,9 +29,9 @@ public class FirstRecommend {
 			rs = foodInfoDao.getResult(conn,n);
 			while(rs.next()){
 				FoodInfo temp = new FoodInfo();
-				temp.set(rs.getString(0));
+				/*temp.set(rs.getString(0));
 				temp.set(rs.getString(1));
-				temp.set(rs.getString(2));
+				temp.set(rs.getString(2));*/
 				food.add(temp);
 			}
 		}catch (SQLException e){

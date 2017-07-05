@@ -7,13 +7,13 @@
 <title>司秦登陆</title>
 <link rel="stylesheet" href="main.css" type="text/css" />
 
-<!-- <style type="text/css">
+ <style type="text/css">
 body {
-	color:#000;
+	color:Color.white;
 	font-size: 14px;
 	margin:20px auto;
 }
-</style> -->
+</style> 
 <script type="text/javascript">
 	function check(form) {
 		if (document.forms.loginForm.account.value=="") {

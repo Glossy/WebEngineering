@@ -70,7 +70,7 @@
               </div>
 
                 </li>
-                <li><a href="#" class="scroll">账户(需要添加jsp)</a></li>
+                <li><a href="#" class="scroll">账户：123456</a></li>
                 <li><a href="#" class="scroll">关注</a></li>
                 <li><a href="#" class="scroll">联系我们</a></li>
 

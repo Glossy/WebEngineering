@@ -17,17 +17,18 @@
             padding:0 0;
         }
         .eat{
+        	
             position: absolute;
             left: 100px;
-            top:280px;
+            top:350px;
         }
-        .eat img{width:350px;heigth:350px;}
+        .eat img{width:300px;heigth:300px;}
         .play{
             position: absolute;
-            left: 900px;
-            top:330px;
+            right: 100px;
+            top:400px;
         }
-        .play img{width:350px;heigth:350px;}
+        .play img{width:300px;heigth:300px;}
     </style>
 
 </head>

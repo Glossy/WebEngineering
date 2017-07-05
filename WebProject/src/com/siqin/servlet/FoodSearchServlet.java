@@ -32,11 +32,14 @@ public class FoodSearchServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String food = req.getParameter("food");
+		String foodChina = new String(food.getBytes("ISO-8859-1"),"utf-8");
+		System.out.print(foodChina);
 		RequestDispatcher rd = null;
-		String forward = "FoodSearchResult.jsp";
-		List food_data = service.getFood(food);
+		String forward = "/resultsearch.jsp";
+		List food_data = service.getFood(foodChina);
 		req.setAttribute("food_list", food_data);
 		rd = req.getRequestDispatcher(forward);
+		rd.forward(req, resp);
 	}
 	
 }

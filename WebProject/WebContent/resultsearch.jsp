@@ -1,3 +1,5 @@
+<%@ page import="com.siqin.entity.FoodInfo" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -90,7 +92,7 @@
                 </div>
 
                 </li>
-                <li><a href="#" class="scroll">账户(需要添加jsp)</a></li>
+                <li><a href="#" class="scroll">账户</a></li>
                 <li><a href="#" class="scroll">关注</a></li>
                 <li><a href="#" class="scroll">联系我们</a></li>
 
@@ -106,20 +108,23 @@
 <div class="foodSearchBody" >
     <table class="foodSearchTable" border="1px">
         <tr>
-            <th >景点名称</th>
-            <th >景点种类</th>
-            <th >景点地址</th>
+            <th >名称</th>
+            <th >味道</th>
+            <th >地址</th>
         </tr>
+        <%
+        	ArrayList<FoodInfo> list = (ArrayList<FoodInfo>)request.getAttribute("food_list");
+        	for(int i = 0; i < list.size(); i ++){
+        		FoodInfo food = list.get(i);
+        %>
         <tr>
-            <td class="foodSearchTableName">添加jsp</td>
-            <td class="foodSearchTableName">添加jsp</td>
-            <td class="foodSearchTableAddr">添加jsp</td>
+            <td class="foodSearchTableName"><%=food.getFood_name()%></td>
+            <td class="foodSearchTableName"><%=food.getFood_type() %></td>
+            <td class="foodSearchTableAddr"><%=food.getFood_address() %></td>
         </tr>
-        <tr>
-            <td class="foodSearchTableName">添加jsp</td>
-            <td class="foodSearchTableName">添加jsp</td>
-            <td class="foodSearchTableAddr">添加jsp</td>
-        </tr>
+        <%
+        	}
+        %>
 
     </table>
 

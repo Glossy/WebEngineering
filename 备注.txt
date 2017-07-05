@@ -1,8 +1,0 @@
-在FirstRecommend类中
-	32-34行不知道叶镇涛的表怎么建的以及前端要返回什么数据，所以没写
-跟这个问题相同原因的还有ScenicInfoDaoImpl类中的查询语句
-
-在FoodSelectionServlet和ScenicSelection类中具体的转跳代码以及返回List给前端的代码没写。
-
-
-FirstRecommend中的getFood和getSenics方法返回一个含有8个FoodInfo或ScenicInfo类型的List

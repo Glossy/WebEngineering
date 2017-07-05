@@ -36,13 +36,17 @@ public class FoodSearchService {
 			rs = foodsearchDao.getResult(conn, food);
 			while(rs.next()){
 				FoodInfo temp = new FoodInfo();
-				temp.setFood_name(rs.getString(0));
-				temp.setFood_type(rs.getString(1));
-				temp.setFood_address(rs.getString(2));
+				temp.setFood_name(rs.getString("名称"));
+				temp.setFood_type(rs.getString("类型"));
+				temp.setFood_address(rs.getString("位置"));
+				System.out.println("mmmmmmmmmm");
 				food_data.add(temp);
 			}
 		}catch (SQLException e){
 			e.printStackTrace();
+		}
+		for (FoodInfo foodInfo : food_data) {
+			System.out.println(foodInfo.getFood_name());
 		}
 		return food_data;
 	}
